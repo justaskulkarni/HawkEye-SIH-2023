@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Mooli&family=Raleway:ital,wght@1,500&display=swap');
+
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+
+nav {
+    width: 100%;
+    height: 50px;
+    background-color: #dfdaf1;
+    line-height: 50px;
+    font-size: 21px;
+    display: flex;
+}
+
+p {
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Mooli', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 90px;
+}
+
+h2 {
+    font-size: 25px;
+    text-align: center;
+    margin-left: 130px;
+    margin-right: 130px;
+    font-family: 'Mooli', sans-serif;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+
+button {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-size: 20px;
+    line-height: 1;
+    padding: 15px 40px 15px 40px;
+    position: relative;
+    transition: filter var(--motion-duration);
+    margin-left: 700px;
+}
+
+button:hover {
+    filter: brightness(1.1);
+}
+
+button:active {
+    filter: brightness(1);
+}
+
+button>span {
+    display: block;
+    position: relative;
+    transition: transform var(--motion-duration) var(--motion-ease);
+    z-index: 1;
+}
+
+button:hover>span {
+    transform: scale(1.05);
+}
+
+button:active>span {
+    transform: scale(0.95);
+}
+
+button>svg {
+    fill: #950cde;
+    position: absolute;
+    top: -6%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+}
+
+button>svg>path {
+    transition: var(--motion-duration) var(--motion-ease);
+}
+
+button:hover>svg>path {
+    d: path("M0,0 C0,-5 100,-5 100,0 C105,0 105,100 100,100 C100,105 0,105 0,100 C-5,100 -5,0 0,0");
+}
+
+button:active>svg>path {
+    d: path("M0,0 C30,10 70,10 100,0 C95,30 95,70 100,100 C70,90 30,90 0,100 C5,70 5,30 0,0");
+}
+
+.spacer {
+    aspect-ratio: 960/500;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.layer1 {
+    background-image: url(layer2.svg);
+}
+
+.lbtn {
+    display: flex;
+    justify-content: right;
+    background-color: #dfdaf1;
+    color: rgb(0, 8, 8);
+    margin-left: 1070px;
+    padding: 10px 40px 10px 40px;
+    font-size: 15px;
+    border-radius: 20px;
+    border: 3px solid rgb(5, 5, 5);
+    margin-top: 10px;
+    box-shadow: 3px 5px #070707;
+}
+
+.sbtn {
+    display: flex;
+    justify-content: right;
+    float: right;
+    background-color: #dfdaf1;
+    color: rgb(0, 8, 8);
+    margin-left: 20px;
+    padding: 10px 40px 10px 40px;
+    font-size: 15px;
+    border-radius: 20px;
+    border: 3px solid rgb(5, 5, 5);
+    margin-top: 10px;
+    box-shadow: 3px 5px #070707;
+}
+
+.dbtn {
+    display: flex;
+    justify-content: right;
+    float: right;
+    background-color: #dfdaf1;
+    color: rgb(0, 8, 8);
+    margin-left: 20px;
+    padding: 10px 40px 10px 40px;
+    font-size: 15px;
+    border-radius: 20px;
+    border: 3px solid rgb(5, 5, 5);
+    margin-top: 10px;
+    box-shadow: 3px 5px #070707;
+}
+
+button:hover {
+    background-color: rgb(0, 8, 8);
+    color: #f8f6f6;
+    box-shadow: 3px 5px #dfdaf1;
+}
+
+.curve {
+    position: absolute;
+    height: 225px;
+    width: 100%;
+    bottom: 0;
+}
+
+.curve::before {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: #202731;
+    transform: translate(85%, 60%);
+}
+
+.curve::after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: #3c31dd;
+    transform: translate(-4%, 40%);
+    z-index: -1;
+}
