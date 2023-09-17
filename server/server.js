@@ -14,6 +14,9 @@ app.use(cors())
 app.use(express.json())
 app.use(bodyParser.json())
 
+const authroutes = require('./routes/AuthRoutes')
+app.use('/api/auth', authroutes)
+
 const server = require('http').createServer(app)
 const MYPORT = process.env.PORT || 6100
 
