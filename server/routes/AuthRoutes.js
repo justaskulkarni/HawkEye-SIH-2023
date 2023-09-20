@@ -20,7 +20,6 @@ router.post('/signup', async (req, res) => {
         const salt = await bcrypt.genSalt(12)
         pass = req.body.password
         const hashp = await bcrypt.hash(pass, salt);
-
         const newUser = new User({
             email: req.body.email,
             password: hashp,
@@ -42,15 +41,15 @@ router.post('/signup', async (req, res) => {
 router.post('/login', async (req, res) => {
 
     try {
-
+        console.log(req.body.email, req.body.role)
         const requser = await User.findOne({ email: req.body.email, role: req.body.role })
-
+        
         if (!requser) {
             throw Error('Incorrect Details')
         }
 
         const match = await bcrypt.compare(req.body.password, requser.password)
-
+        
         if (!match) {
             throw Error('Password is incorrect')
         }

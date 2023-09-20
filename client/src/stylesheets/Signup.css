@@ -1,0 +1,139 @@
+img {
+    max-width: 100%;
+    display: block;
+}
+
+input {
+    appearance: none;
+    border-radius: 0;
+}
+
+.auth-container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://img.freepik.com/free-vector/fluid-pastel-background_53876-93216.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.auth-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 425px;
+    margin-left: 35rem;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px 0 rgba(#999, .25);
+    padding: .75rem;
+}
+
+.auth-card-image {
+    border-radius: 8px;
+    overflow: hidden;
+    padding-bottom: 55%;
+    background-image: url('https://cdn.sega.co.uk/twopointstudios/public/styles/1920/public/content/media/bg/image/bg.jpg?itok=9tz-KfWH');
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-position: 0 5%;
+    position: relative;
+}
+
+.auth-card-heading {
+    position: absolute;
+    left: 10%;
+    top: 15%;
+    right: 10%;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.222;
+
+    small {
+        display: block;
+        font-size: .75em;
+        font-weight: 400;
+        margin-top: .25em;
+    }
+}
+
+.auth-card-form {
+    padding: 2rem 1rem 0;
+}
+
+.auth-input {
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    padding-top: 1.5rem;
+    &+.input {
+        margin-top: 1.5rem;
+    }
+}
+
+.auth-input-label {
+    color: #8597a3;
+    top: 1.5rem;
+    transition: .25s ease;
+}
+
+.auth-input-field {
+    border: 0;
+    z-index: 1;
+    background-color: transparent;
+    border-bottom: 2px solid #eee;
+    font: inherit;
+    font-size: 1.125rem;
+    padding: .25rem 0;
+    &:focus, &:valid {
+		outline: 0;
+		border-bottom-color: #0a0f76;
+		&+.input-label {
+			color: #0a0f76;
+			transform: translateY(-1.5rem);
+		}
+	}
+}
+
+.auth-select{
+    border: 0;
+    z-index: 1;
+    background-color: transparent;
+    border-bottom: 2px solid #eee;
+    font: inherit;
+    font-size: 1.125rem;
+    padding: .25rem 0;
+}
+
+.auth-action {
+    margin-top: 2rem;
+}
+
+.auth-action-button {
+    font: inherit;
+    font-size: 1.25rem;
+    padding: 1em;
+    width: 100%;
+    font-weight: 500;
+    background-color: #6658d3;
+    border-radius: 6px;
+    color: #FFF;
+    border: 0;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+.auth-card-info {
+    padding: 1rem 1rem;
+    text-align: center;
+    font-size: .875rem;
+    color: #8597a3;
+
+    a {
+        display: block;
+        color: #6658d3;
+        text-decoration: none;
+    }
+}

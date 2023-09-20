@@ -10,14 +10,21 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@material-ui/core": "^4.12.4",
+    "@mui/material": "^5.14.10",
+    "leaflet": "^1.9.4",
     "react": "^18.2.0",
-    "react-calendar": "^4.6.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
     "react-leaflet": "^4.2.1",
     "react-router-dom": "^6.16.0",
+    "react-simple-maps": "^3.0.0",
     "react-spring": "^9.7.2",
-    "recharts": "^2.8.0"
+    "recharts": "^2.8.0",
+    "socket.io-client": "^4.7.2",
+    "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

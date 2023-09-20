@@ -1,7 +1,14 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import '../stylesheets/Home.css'
-
+import Typewriter from 'typewriter-effect';
 const Home = () => {
+  let navigate = useNavigate()
+  const handleClick =  (e) => {
+    e.preventDefault();
+    navigate("/signup");
+    
+};
   return (
     <>
       {/* <section className='blue'>
@@ -22,14 +29,28 @@ const Home = () => {
       <section>
         <div className='spacer layer1'>
           <nav>
-            <button className='lbtn'>LogIn</button>
-            <button className='sbtn'>Sign-Up</button>
-            <button className='dbtn'>Dashboard</button>
+            
           </nav>
-          <p>HawkEye</p>
-          <h2 className='tagline'>Unlocking the Power of Insight: Our innovative website leverages advanced technology to decode human behavior, enhancing safety, trust, and decision-making across industries.</h2>
+          <p>
+          {/* <Typewriter
+            onInit={(typewriter) => {
+              typewriter.typeString('HawkEye')
+                .callFunction(() => {
+                  console.log('String typed out!');
+                })
+                .pauseFor(1500)
+                .deleteAll()
+                .callFunction(() => {
+                  console.log('All strings were deleted');
+                })
+                .start();
+            }}
+          /> */}
+          HawkEye
+          </p>
+          <h2 className='tagline'>Unlocking the Power of Insight: Our innovative website leverages advanced technology to decode human behavior, enhancing safety, trust, and decision-making for the Ministry of Defence.</h2>
           {/* <button className='btn'>Start</button> */}
-          <button>
+          <button className="button" onClick={handleClick}>
             <span>Start</span>
             <svg viewBox="-5 -5 110 110" preserveAspectRatio="none" aria-hidden="true">
               <path d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0" />

@@ -1,31 +1,41 @@
 import { useState } from 'react';
-import Calendar from 'react-calendar';
 import '../stylesheets/Dashboard.css'
-import 'react-calendar/dist/Calendar.css';
 import Middle from '../components/Middle';
 import Sidebar from '../components/Sidebar';
 import Header from '../components/Header';
 import ReportForm from '../components/ReportForm';
+import Alerts from '../components/Alerts';
+import Chat from '../components/Chat';
+import SurveyMap from '../components/SurveyMap';
+import CCTVFeed from '../components/CCTVFeed';
+import ViewReports from '../components/ViewReports';
 
 const Dashboard = () => {
-    const [date, setDate] = useState(new Date());
 
-    const handleDateChange = (newDate) => {
-        setDate(newDate);
-    };
     const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
 
     const OpenSidebar = () => {
         setOpenSidebarToggle(!openSidebarToggle)
     }
+
+    const [activeContent, setActiveContent] = useState('dashboard'); // Default to 'dashboard'
+
+    // Function to handle the sidebar item click
+    const handleSidebarItemClick = (content) => {
+        setActiveContent(content);
+    };
     return (
         <>
             <div className='grid-container'>
                 <Header OpenSidebar={OpenSidebar} />
-                <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar} />
-                <ReportForm />
+                <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar} onItemClick={handleSidebarItemClick} />
+                {activeContent === 'dashboard' ? <Middle /> : null}
+                {activeContent === 'createReports' ? <ReportForm /> : null}
+                {activeContent === 'alerts' ? <Alerts /> : null}
+                {activeContent === 'chat' ? <Chat /> : null}
+                {activeContent === 'cctvfeeds' ? <CCTVFeed /> : null}
+                {activeContent === 'viewreports' ? <ViewReports /> : null}
             </div>
-            {/* <Calendar onChange={handleDateChange} value={date} /> */} 
         </>
     )
 }
