@@ -1,5 +1,7 @@
-
-<h1 align="center" > HawkEye-SIH-2023</h1>
+<p align="center">
+   <img height="150" width="320" src="https://github.com/justaskulkarni/HawkEye-SIH-2023/assets/103986230/d089c887-a03d-4aae-80ec-e82388df949b">
+</p>
+<h1 align="center" >HawkEye-SIH-2023</h1>
 
 ##  📝Description
 Website which achieves Robust human target detection and acquisition/locking without losing track under occlusions for outdoor operational scenarios. It also includes a dashboard which reflects the number of suspicious activities detected and chatbot assistance as well.
